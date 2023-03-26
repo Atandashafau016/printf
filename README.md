@@ -1,3 +1,4 @@
+Description:
 0x11. C - printf team project
 Description : The printf function sends formatted  output to stdout. a custom _printf()for learning  purposes developed by cohort #12 students josh-jaiy and atanda shafau. _printf() function format string is a character string, beginning and ending in its initial shift state, if any. These arguments are placed using the '%' operator.
 Group project:
@@ -5,7 +6,7 @@ Group project:
  a Spur for life                                                                    
 Write a function that produces output according to a format.                        
                                                                                     
-                                                                                    
+  Group Project:                                                                                   
 1. Education is when you read the fine print. Experience is what you get if you don'
 t                                                                                   
 Handle the following conversion specifiers:
