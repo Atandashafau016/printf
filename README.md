@@ -1,6 +1,6 @@
       0x11. C - printf team project
 
-Description : The printf function sends formatted  output to stdout. a custom _printf()for learning  purposes developed by cohort #12 students josh-jaiy and atanda shafau. _printf() function format string is a character string, beginning and ending in its initial shift state, if any. These arguments are placed using the '%' operator.
+Description : The printf function sends formatted  output to stdout. a custom _printf()for learning  purposes developed by cohort #12 students @josh-jaiy and @atanda shafau. _printf() function format string is a character string, beginning and ending in its initial shift state, if any. These arguments are placed using the '%' operator.
 
 Group project:
  
