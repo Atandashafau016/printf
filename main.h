@@ -96,35 +96,35 @@ struct float_info
 };
 typedef struct float_info float_info_t;
 
-
+/*Function that produce output according to a format*/
 int _putchar(char c);
 int _putstr(char *str);
 int write_to_buffer(char c, char action);
 int _printf(const char *format, ...);
 void write_format(va_list *args_list, fmt_info_t *fmt_info);
 
-
+/*helping functions */
 void print_repeat(char c, int n);
 void _putnchars(int n, ...);
-char is_character(char c);
+char is_letter(char c);
 void set_format_error(const char *, int *, int len, int, int *);
 void put_num(int zeros_count, long num, char *str);
 
-
+/*Format(fmt) information functions*/
 void init_format_info(fmt_info_t *spec);
 fmt_info_t *new_format_info();
 float_info_t *new_float_info(ushort_t exponent_size, ushort_t mantissa_size);
 void free_float_info(float_info_t *flt_info);
 
-
+/*parser*/
 int set_number(const char *str, int *number);
 void set_length(char cur, int *pos, fmt_info_t *fmt_info);
 int set_flags(const char *str, fmt_info_t *fmt_info);
 void set_precision(const char *str, va_list args,
-	fmt_info_t *fmt_info, int *i, int *error_status);
+    fmt_info_t *fmt_info, int *i, int *error_status);
 int read_format_info(const char *, va_list, fmt_info_t *, int *);
 
-
+/*converting functions*/
 void convert_fmt_percent(va_list *args_list, fmt_info_t *fmt_info);
 void convert_fmt_p(va_list *args_list, fmt_info_t *fmt_info);
 void convert_fmt_c(va_list *args_list, fmt_info_t *fmt_info);
@@ -141,8 +141,8 @@ void convert_fmt_r(va_list *args_list, fmt_info_t *fmt_info);
 void convert_fmt_S(va_list *args_list, fmt_info_t *fmt_info);
 
 void convert_fmt_fF(va_list *args_list, fmt_info_t *fmt_info);
-
-
+/*End converter*/
+/*strings handle*/
 int str_len(char *str);
 void mem_set(char *str, int n, char c);
 void left_shift(char *str, int n);
@@ -159,8 +159,9 @@ char *sub_str(char *str, int i, char can_free);
 char *trim_start(char *str, char c, char can_free);
 char *trim_end(char *str, char c, char can_free);
 char *str_copy(char *str);
+/*endstring*/
 
-
+/*handles maths*/
 char hex_digit(char c);
 char cmp_nums(char *left, char *right);
 int str_to_int(char *num);
@@ -181,8 +182,8 @@ char *u_long_to_hex(unsigned long num, char upper);
 
 char *round_float(char *num, unsigned int precision, char can_free);
 char *round_float_to_int(char *num, int len, int dec_pos, int frac_len);
-
-
+/*endif*/
+/*convert to string*/
 char *u_long_to_str(unsigned long num);
 char *long_to_str(long num);
 char *ptr_to_str(void *ptr);
@@ -192,8 +193,8 @@ void set_float_parts(double num,	uchar_t exponent_size,
 	uchar_t mantissa_size, float_info_t *float_info);
 char *mantissa_to_dec_fraction(char *mantissa, unsigned short frac_len);
 char *float_to_str(float_info_t *flt_info, char can_free);
-
-
+/*endif*/
+/*checker*/
 char is_digit(char c);
 char is_non_custom_specifier(char c);
 char is_specifier(char c);
